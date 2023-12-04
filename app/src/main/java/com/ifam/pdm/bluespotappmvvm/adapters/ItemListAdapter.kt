@@ -8,7 +8,7 @@ import com.ifam.pdm.bluespotappmvvm.databinding.ItemListBinding
 
 class ItemListAdapter: RecyclerView.Adapter<ItemListAdapter.ItemListViewHolder>() {
 
-    val itemList: MutableList<String> = mutableListOf()
+    var itemList: MutableList<String> = mutableListOf()
 
     inner class ItemListViewHolder(private val binding: ItemListBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: String) {
@@ -19,6 +19,11 @@ class ItemListAdapter: RecyclerView.Adapter<ItemListAdapter.ItemListViewHolder>(
     fun addItem(item: String) {
         itemList.add(item)
         notifyItemInserted(itemList.size - 1)
+    }
+
+    fun setList(items: List<String>) {
+        itemList = items.toMutableList()
+        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemListViewHolder {

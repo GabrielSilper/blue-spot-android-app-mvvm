@@ -19,7 +19,7 @@ class MyPropertiesActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMyPropertiesBinding
     private lateinit var propertiesViewModel: PropertiesViewModel
     private val retrofitService = RetrofitService.getInstance()
-    private val adapter = PropertyAdapter()
+    private val adapter = PropertyAdapter {}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
