@@ -10,6 +10,7 @@ class PropertyService(private val retrofitService: RetrofitService) {
     ) = retrofitService.createProperty(landlordId, propertyCreationDto)
 
     fun findAllProperties() = retrofitService.findAllProperties()
+    fun findPropertyById(propertyId: String) = retrofitService.findPropertyById(propertyId)
 
     fun findMyProperties(landlordId: String) = retrofitService.findMyProperties(landlordId)
 }

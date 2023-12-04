@@ -30,4 +30,17 @@ class PropertyViewModel(private val propertyService: PropertyService): ViewModel
         })
     }
 
+    fun findPropertyById(propertyId: String) {
+        val request = propertyService.findPropertyById(propertyId)
+        request.enqueue(object : Callback<Property>{
+            override fun onResponse(call: Call<Property>, response: Response<Property>) {
+                property.postValue(response.body())
+            }
+
+            override fun onFailure(call: Call<Property>, t: Throwable) {
+                errorMessage.postValue(t.message)
+            }
+        })
+    }
+
 }

@@ -1,5 +1,6 @@
 package com.ifam.pdm.bluespotappmvvm.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -19,7 +20,7 @@ class PropertiesActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPropertiesBinding
     private lateinit var propertiesViewModel: PropertiesViewModel
     private val retrofitService = RetrofitService.getInstance()
-    private val adapter = PropertyAdapter()
+    private val adapter = PropertyAdapter{ showProperty(it)}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,5 +51,11 @@ class PropertiesActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         propertiesViewModel.findAllProperties()
+    }
+
+    private fun showProperty(propertyId: String) {
+        val intent = Intent(this, PropertyActivity::class.java)
+        intent.putExtra("propertyId", propertyId)
+        startActivity(intent)
     }
 }

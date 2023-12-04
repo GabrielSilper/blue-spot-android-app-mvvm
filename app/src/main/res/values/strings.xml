@@ -8,13 +8,14 @@
     <string name="home">Ver propriedades disponíveis</string>
     <string name="blueSpotUrl">https://blue-spot-kotlin-api-production.up.railway.app/</string>
     <string name="descricao">Apartamento com duas suítes, um banheiro e cozinha americana, Apartamento com duas suítes, um banheiro e cozinha americana</string>
+    <string name="endereco">Rua das Flores, 123, Jardim Primavera - 12345678 - São Paulo SP</string>
     <string name="minhas_propriedades">Minhas propriedades</string>
     <string name="title_activity_button_navigation">Button_navigation</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="ver_perfil">Ver meu perfil</string>
-    <string name="faça_login">Faça login primeiro</string>
+    <string name="faça_login">Faça login para ver suas informações</string>
     <string name="fazer_login">Fazer login</string>
     <string name="title_activity_tela_principal">telaPrincipal</string>
     <string name="title_inicial">Pagina Inicial</string>

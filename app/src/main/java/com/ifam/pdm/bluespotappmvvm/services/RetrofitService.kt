@@ -29,6 +29,9 @@ interface RetrofitService {
     @GET("properties")
     fun findAllProperties(): Call<List<Property>>
 
+    @GET("properties/{propertyId}")
+    fun findPropertyById(@Path("propertyId") propertyId: String): Call<Property>
+
     @GET("landlords/{landlordId}/properties")
     fun findMyProperties(
         @Path(value = "landlordId") landlordId: String,

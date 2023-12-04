@@ -15,6 +15,9 @@
         android:theme="@style/Theme.BlueSpotAppMVVM"
         tools:targetApi="31">
         <activity
+            android:name=".view.PropertyActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.MyPropertiesActivity"
             android:exported="false" />
         <activity
