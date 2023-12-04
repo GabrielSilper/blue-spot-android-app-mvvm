@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <EditText
+        android:id="@+id/edt_nome"
+        style="@style/EditTextStyle"
+        android:hint="Nome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/edt_email"
+        style="@style/EditTextStyle"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_nome" />
+
+
+    <EditText
+        android:id="@+id/edt_celular"
+        style="@style/EditTextStyle"
+        android:hint="Celular"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
+
+    <EditText
+        android:id="@+id/edt_senha"
+        style="@style/EditTextStyle"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_celular" />
+
+
+    <EditText
+        android:id="@+id/edt_cpf"
+        style="@style/EditTextStyle"
+        android:hint="CPF"
+        app:layout_constraintTop_toBottomOf="@+id/edt_senha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="number"/>
+
+
+    <EditText
+        android:id="@+id/edt_rg"
+        style="@style/EditTextStyle"
+        android:hint="RG"
+        app:layout_constraintTop_toBottomOf="@+id/edt_cpf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="number" />
+
+
+    <EditText
+        android:id="@+id/edt_profissao"
+        style="@style/EditTextStyle"
+        android:hint="Profissão"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_rg" />
+
+
+    <EditText
+        android:id="@+id/edt_nacionalidade"
+        style="@style/EditTextStyle"
+        android:hint="Nacionalidade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_profissao" />
+
+
+    <EditText
+        android:id="@+id/edt_endereco"
+        style="@style/EditTextStyle"
+        android:hint="Endereço"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_nacionalidade" />
+
+
+    <Spinner
+        android:id="@+id/spinner_estado_civil"
+        style="@style/SpinnerStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_endereco" />
+
+    <Button
+        android:id="@+id/btn_cadastrar"
+        style="@style/ButtonStyle"
+        android:text="Cadastrar"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="@color/azul_principal"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_estado_civil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

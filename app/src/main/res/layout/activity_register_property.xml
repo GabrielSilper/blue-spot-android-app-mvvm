@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/edtEndereco"
+            style="@style/EditTextStyle"
+            android:hint="Endereço"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtDescricao"
+            style="@style/EditTextStyle"
+            android:hint="Descrição"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtEndereco" />
+
+        <EditText
+            android:id="@+id/edtValor"
+            style="@style/EditTextStyle"
+            android:hint="Valor"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtDescricao" />
+
+        <Spinner
+            android:id="@+id/spinnerTipoPropriedade"
+            style="@style/SpinnerStyle"
+            android:hint="Tipo de Propriedade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtValor" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchGaragem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Garagem?"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerTipoPropriedade"
+            app:switchPadding="15dp"
+            app:thumbTint="@color/azul_principal"
+            app:trackTint="@color/cardview_dark_background" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewRestricoes"
+            style="@style/RecyclerViewStyle"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchGaragem"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_list" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_add_restricoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewRestricoes">
+
+            <EditText
+                android:id="@+id/edtRestricoes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:hint="Adicione uma restrição" />
+
+            <Button
+                android:id="@+id/btnAdicionarRestricoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adicionar"
+                app:backgroundTint="@color/add" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMobilia"
+            style="@style/RecyclerViewStyle"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_add_restricoes"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_list" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_add_mobilia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewMobilia">
+
+            <EditText
+                android:id="@+id/edtMobilia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:hint="Adicione uma mobília" />
+
+            <Button
+                android:id="@+id/btnAdicionarMobilia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adicionar"
+                app:backgroundTint="@color/add" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <Button
+            android:id="@+id/btnCadastrarPropriedade"
+            style="@style/ButtonStyle"
+            android:layout_marginTop="16dp"
+            android:text="Cadastrar Propriedade"
+            app:backgroundTint="@color/azul_principal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_add_mobilia" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
